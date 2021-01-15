@@ -5,14 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="770772f0-231c-469f-82af-3be864b5b49b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bar.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Bar.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bar/MainApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -33,6 +40,20 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
   </component>
+  <component name="RunManager">
+    <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="bar.MainApp" />
+      <module name="Bar" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MainApp" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -43,5 +64,23 @@
       <updated>1610725070931</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1324" height="180" key="GridCell.Tab.0.bottom" timestamp="1610727391488">
+      <screen x="0" y="0" width="1366" height="740" />
+    </state>
+    <state width="1324" height="180" key="GridCell.Tab.0.bottom/0.0.1366.740/-1920.-141.1920.1080@0.0.1366.740" timestamp="1610727391488" />
+    <state width="1324" height="180" key="GridCell.Tab.0.center" timestamp="1610727391487">
+      <screen x="0" y="0" width="1366" height="740" />
+    </state>
+    <state width="1324" height="180" key="GridCell.Tab.0.center/0.0.1366.740/-1920.-141.1920.1080@0.0.1366.740" timestamp="1610727391487" />
+    <state width="1324" height="180" key="GridCell.Tab.0.left" timestamp="1610727391487">
+      <screen x="0" y="0" width="1366" height="740" />
+    </state>
+    <state width="1324" height="180" key="GridCell.Tab.0.left/0.0.1366.740/-1920.-141.1920.1080@0.0.1366.740" timestamp="1610727391487" />
+    <state width="1324" height="180" key="GridCell.Tab.0.right" timestamp="1610727391488">
+      <screen x="0" y="0" width="1366" height="740" />
+    </state>
+    <state width="1324" height="180" key="GridCell.Tab.0.right/0.0.1366.740/-1920.-141.1920.1080@0.0.1366.740" timestamp="1610727391488" />
   </component>
 </project>
