@@ -1,0 +1,1 @@
+INSERT INTO product VALUES("piwo",10.40,0.23);

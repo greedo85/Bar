@@ -1,6 +1,6 @@
 /* tabela produktu */
 
-CREATE TABLE IF NOT EXIST product
+CREATE TABLE IF NOT EXISTS product
 (
 	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 	name VARCHAR(155) NOT NULL,
@@ -8,7 +8,9 @@ CREATE TABLE IF NOT EXIST product
 	tax DECIMAL (0,2) NOT NULL
 );
 
-CREATE TABLE IF NOT EXIST customer
+/* tabela klienta musi zawierać informacje potrzebne do faktury */
+
+CREATE TABLE IF NOT EXISTS customer
 (
 	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 	company_name varchar(255),
@@ -20,11 +22,25 @@ CREATE TABLE IF NOT EXIST customer
 	nip varchar(10)
 );
 
-CREATE TABLE IF NOT EXIST bar_order
+/* zamówienie ma przypisanego klienta, ma informacje o swoim statusie oraz wersji rachunku*/
+
+CREATE TABLE IF NOT EXISTS bar_order
 (
 	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-	customer_id INT NOT NULL FOREIGN KEY (customer_id) REFERENCES customer,
+	customer_id INT NOT NULL FOREIGN KEY (customer_id) REFERENCES customer(id),
 	status ENUM	('opened','closed') NOT NULL DEFAULT 'opened',
 	payment_doc ENUM('invoice', 'receipt')
 
-)
+);
+
+/* tabela pośrednia łącząca informacje o produkcie na zamówieniu */
+
+CREATE TABLE IF NOT EXISTS bar_order_product
+(
+	bar_order_id INT NOT NULL FOREIGN KEY (bar_order_id) REFERENCES bar_order(id),
+	product_id INT NOT NULL FOREIGN KEY (product_id) REFERENCES product(id),
+	quantity INT NOT NULL,
+	
+);
+
+
