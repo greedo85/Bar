@@ -27,9 +27,10 @@ CREATE TABLE IF NOT EXISTS customer
 CREATE TABLE IF NOT EXISTS bar_order
 (
 	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-	customer_id INT NOT NULL FOREIGN KEY (customer_id) REFERENCES customer(id),
+	customer_id INT NOT NULL, 
 	status ENUM	('opened','closed') NOT NULL DEFAULT 'opened',
-	payment_doc ENUM('invoice', 'receipt')
+	payment_doc ENUM('invoice', 'receipt'),
+	CONSTRAINT FK_customer_id FOREIGN KEY (customer_id) REFERENCES customer(id)
 
 );
 
@@ -37,10 +38,12 @@ CREATE TABLE IF NOT EXISTS bar_order
 
 CREATE TABLE IF NOT EXISTS bar_order_product
 (
-	bar_order_id INT NOT NULL FOREIGN KEY (bar_order_id) REFERENCES bar_order(id),
-	product_id INT NOT NULL FOREIGN KEY (product_id) REFERENCES product(id),
+	bar_order_id INT NOT NULL, 
+	product_id INT NOT NULL, 
 	quantity INT NOT NULL,
-	
+	PRIMARY KEY (bar_order_id, product_id),
+	CONSTRAINT FK_bar_order_id FOREIGN KEY (bar_order_id) REFERENCES bar_order(id),
+	CONSTRAINT FK_product_id FOREIGN KEY (product_id) REFERENCES product(id)
 );
 
 
