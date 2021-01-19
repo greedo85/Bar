@@ -1,31 +1,37 @@
 package bar.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
-@NoArgsConstructor
+
 @Entity
 @Table(name="product")
+@Getter
+@Setter
 public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Column
+
     private String name;
-    @Column
+
     private double price;
-    @Column
+
     private double tax;
 
     @OneToMany(
-            mappedBy = "product",
-            cascade = CascadeType.ALL,
-            orphanRemoval = true
+            mappedBy = "product"
     )
+    @JsonIgnoreProperties
     private List<BarOrderProduct> barOrderProducts=new ArrayList<>();
 
 }

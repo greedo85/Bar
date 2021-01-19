@@ -14,14 +14,15 @@ public class BarOrderProduct {
     @EmbeddedId
     private BarOrderProductId id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @MapsId("barOrderId")
+    @JoinColumn(name="bar_order_id")
     private BarOrder barOrder;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @MapsId("productId")
+    @JoinColumn(name="product_id")
     private Product product;
-
 
     private int quantity;
 

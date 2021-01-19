@@ -1,5 +1,6 @@
 package bar.model;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -11,7 +12,7 @@ import java.io.Serializable;
 @Embeddable
 @Getter
 @Setter
-
+@EqualsAndHashCode
 public class BarOrderProductId implements Serializable {
 
     @Column(name="bar_order_id")
@@ -19,8 +20,5 @@ public class BarOrderProductId implements Serializable {
 
     @Column(name="product_id")
     private int productId;
-
-
-
 
 }
