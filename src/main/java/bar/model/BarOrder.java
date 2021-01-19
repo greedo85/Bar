@@ -16,14 +16,13 @@ public class BarOrder {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-
-    @Column( columnDefinition = "ENUM('OPENED', 'CLOSED'" )
+    @Column(name = "payment_doc", columnDefinition = "ENUM('INVOICE', 'RECEIPT'")
     @Enumerated(EnumType.STRING)
-    private Enum status;
+    private Payment paymentDoc;
 
-    @Column(name = "payment_doc", columnDefinition = "ENUM('INVOICE', 'RECEIPT'" )
+    @Column(columnDefinition = "ENUM('OPENED', 'CLOSED'")
     @Enumerated(EnumType.STRING)
-    private Enum paymentDoc;
+    private Status status;
 
     @ManyToOne
     @JoinColumn(name = "customer_id", referencedColumnName = "id")
@@ -32,5 +31,5 @@ public class BarOrder {
     @OneToMany(
             mappedBy = "barOrder"
     )
-    private List<BarOrderProduct> barOrderProducts=new ArrayList<>();
+    private List<BarOrderProduct> barOrderProducts = new ArrayList<>();
 }

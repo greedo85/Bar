@@ -5,18 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="770772f0-231c-469f-82af-3be864b5b49b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/bar/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bar/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bar/MainApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bar/model/BarOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bar/model/BarOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bar/model/BarOrderProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bar/model/BarOrderProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bar/model/BarOrderProductId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bar/model/BarOrderProductId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bar/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bar/model/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bar/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bar/model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/insert.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/schema2.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bar/service/BarOrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bar/service/BarOrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bar/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bar/service/ProductService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

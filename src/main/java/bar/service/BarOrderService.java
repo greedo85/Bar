@@ -10,15 +10,17 @@ import java.util.List;
 @Service
 public class BarOrderService {
 
-    @Autowired
     BarOrderRepository barOrderRepository;
+
+    public BarOrderService( BarOrderRepository barOrderRepository ) {
+        this.barOrderRepository = barOrderRepository;
+    }
 
     public void addBarOrder( BarOrder barOrder ) {
         barOrderRepository.save(barOrder);
     }
 
-    public List<BarOrder> getAllOrders()
-    {
+    public List<BarOrder> getAllOrders() {
         return barOrderRepository.findAll();
     }
 }
