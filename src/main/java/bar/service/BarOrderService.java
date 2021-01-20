@@ -12,6 +12,7 @@ public class BarOrderService {
 
     BarOrderRepository barOrderRepository;
 
+    @Autowired
     public BarOrderService( BarOrderRepository barOrderRepository ) {
         this.barOrderRepository = barOrderRepository;
     }

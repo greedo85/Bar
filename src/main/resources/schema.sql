@@ -1,14 +1,13 @@
-/* tabela produktu */
+USE 'bar-db';
 
 CREATE TABLE IF NOT EXISTS product
 (
 	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 	name VARCHAR(155) NOT NULL,
 	price DECIMAL (6,2) NOT NULL,
-	tax DECIMAL (0,2) NOT NULL
+	tax DECIMAL (2,2) NOT NULL
 );
 
-/* tabela klienta musi zawierać informacje potrzebne do faktury */
 
 CREATE TABLE IF NOT EXISTS customer
 (
@@ -22,24 +21,22 @@ CREATE TABLE IF NOT EXISTS customer
 	nip varchar(10)
 );
 
-/* zamówienie ma przypisanego klienta, ma informacje o swoim statusie oraz wersji rachunku*/
 
 CREATE TABLE IF NOT EXISTS bar_order
 (
 	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-	customer_id INT NOT NULL, 
-	status ENUM	('opened','closed') NOT NULL DEFAULT 'opened',
-	payment_doc ENUM('invoice', 'receipt'),
+	customer_id INT NOT NULL,
+	status ENUM	('OPENED','CLOSED') NOT NULL DEFAULT 'opened',
+	payment_doc ENUM('INVOICE', 'RECEIPT') DEFAULT 'RECEIPT',
 	CONSTRAINT FK_customer_id FOREIGN KEY (customer_id) REFERENCES customer(id)
 
 );
 
-/* tabela pośrednia łącząca informacje o produkcie na zamówieniu */
 
 CREATE TABLE IF NOT EXISTS bar_order_product
 (
-	bar_order_id INT NOT NULL, 
-	product_id INT NOT NULL, 
+	bar_order_id INT NOT NULL,
+	product_id INT NOT NULL,
 	quantity INT NOT NULL,
 	PRIMARY KEY (bar_order_id, product_id),
 	CONSTRAINT FK_bar_order_id FOREIGN KEY (bar_order_id) REFERENCES bar_order(id),
@@ -47,3 +44,5 @@ CREATE TABLE IF NOT EXISTS bar_order_product
 );
 
 
+
+-- insert

@@ -1,6 +1,8 @@
 package bar.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -9,6 +11,7 @@ import javax.persistence.*;
 @Table(name="bar_order_product")
 @Getter
 @Setter
+
 public class BarOrderProduct {
 
     @EmbeddedId
@@ -17,6 +20,7 @@ public class BarOrderProduct {
     @ManyToOne
     @MapsId("barOrderId")
     @JoinColumn(name="bar_order_id")
+    @JsonIgnore
     private BarOrder barOrder;
 
     @ManyToOne
