@@ -18,7 +18,7 @@ public class BarOrderService {
     }
 
     public void addBarOrder( BarOrder barOrder ) {
-        barOrderRepository.save(barOrder);
+        barOrderRepository.saveAndFlush(barOrder);
     }
 
     public List<BarOrder> getAllOrders() {

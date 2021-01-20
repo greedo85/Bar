@@ -1,6 +1,7 @@
 package bar.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -38,6 +39,7 @@ public class BarOrder {
                     mappedBy = "barOrder",
                     cascade = CascadeType.ALL
             )
+    @JsonIgnore
     private List<BarOrderProduct> barOrderProducts = new ArrayList<>();
 }
 
